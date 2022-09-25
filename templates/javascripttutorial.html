@@ -1,3 +1,6 @@
+{% extends "layouts/base.html" %}
+{% set project = "Home" %}
+
 // define an HTML conversion "method" associated with Classroom
 Classroom.prototype._toHtml = function() {
   // HTML Style is build using inline structure
@@ -42,3 +45,4 @@ Classroom.prototype._toHtml = function() {
 
 // IJavaScript HTML processor receive parameter of defined HTML fragment
 $$.html(compsci._toHtml());
+{% endblock %}
