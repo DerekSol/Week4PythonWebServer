@@ -1,0 +1,66 @@
+<html>
+    {% extends "layouts/base.html" %}
+    {% set project = "Home" %}
+    
+    {% block body %}
+        <!-- Start of body content specific to page -->
+        <div class="px-5 py-5 mx-auto">
+            <h1 class="text-white"><strong>Derek Sol's Python Home Page</strong></h1>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ url_for('static', filename='assets/176F281E-A7BC-4D46-A86A-5D7340FBDC3D_1_105_c.jpeg') }}" alt="Python Development" height="250">
+                        <div class="card-body">
+                        <h5 class="card-title">What does Derek Sol like?</h5>
+                        <p class="card-text">
+                            <ol>
+                                <li>Playing Basketball</li>
+                                <li>Playing Video Games</li>
+                                <li>Haning Out With Friends and Family</li>
+                                <li>Traveling the World</li>
+                                <li>Watching TV Shows</li>
+                            </ol>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ url_for('static', filename='assets/71MBcSYO1EL._AC_SL1500_.jpg') }}" alt="Flask Development" height="250">
+                        <div class="card-body">
+                        <h5 class="card-title">About Derek Sol</h5>
+                        <p class="card-text">
+                            <ol>
+                                <li>Im 17 years old</li>
+                                <li>I attend Del Norte High School</li>
+                                <li>I am Full Filipino</li>
+                                <li>I have a family of 4</li>
+                            </ol>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ url_for('static', filename='assets/120195974_625168451492028_6072389400080348711_n.13.jpeg') }}" alt="Backend and Persistence" height="250">
+                        <div class="card-body">
+                        <h5 class="card-title">What are my favorite foods?</h5>
+                        <p class="card-text">
+                            <ol>
+                                <li>Tacos</li>
+                                <li>Pizza</li>
+                                <li>Spaghetti</li>
+                                <li>Chicken</li>
+                                <li>Alfredo Pasta</li>
+                                <li>Mac and Cheese</li>
+                                <li>Ramen</li>
+                            </ol>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    {% endblock %}
+</html>
