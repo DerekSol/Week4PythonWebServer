@@ -2,50 +2,24 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Java" %}
+{% set project = "Stubby" %}
 
-// define an HTML conversion "method" associated with Classroom
-Classroom.prototype._toHtml = function() {
-  // HTML Style is build using inline structure
-  var style = (
-    "display:inline-block;" +
-    "border: 2px solid grey;" +
-    "box-shadow: 0.8em 0.4em 0.4em grey;"
-  );
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>Biography</strong></h1>
+        <body style="background-color:powderblue;">
+        <p class="text-secondary" h1 style="background-color:powderblue;">Derek Sol - Is a 17-year old senior at Del Norte High School. He likes to play basketball, videogames, watching movies, etc. He has a family of 4, with one older sibling. He also owns a Chihuahua named Choco. His favorite genre of music is RandB and Rap. His favorite food is tacos. His favorite basketball team is the Pheonix Suns and his favorite player is Devin Booker.</p>
+        </body>
+        <h1 class="text-primary"><strong>Where To Find Me</strong></h1>
+        <p class="text-secondary"> <a href="https://www.youtube.com/channel/UCX9GD6417_rZHNczs0grJcQ">My Youtube Channel</a> </p>
+        <p class="text-secondary"> <a href="https://twitter.com/DerekSol10">My Twitter</a> </p>
+        <p class="text-secondary"> <a href="https://www.instagram.com/derek_sol/">My Instagram</a> </p>
 
-  // HTML Body of Table is build as a series of concatenations (+=)
-  var body = "";
-  // Heading for Array Columns
-  body += "<tr>";
-  body += "<th><mark>" + "Name" + "</mark></th>";
-  body += "<th><mark>" + "GitHub ID" + "</mark></th>";
-  body += "<th><mark>" + "Class Of" + "</mark></th>";
-  body += "<th><mark>" + "Role" + "</mark></th>";
-  body += "</tr>";
-  // Data of Array, iterate through each row of compsci.classroom 
-  for (var row of compsci.classroom) {
-    // tr for each row, a new line
-    body += "<tr>";
-    // td for each column of data
-    body += "<td>" + row.name + "</td>";
-    body += "<td>" + row.ghID + "</td>";
-    body += "<td>" + row.classOf + "</td>";
-    body += "<td>" + row.role + "</td>";
-    // tr to end line
-    body += "<tr>";
-  }
 
-   // Build and HTML fragment of div, table, table body
-  return (
-    "<div style='" + style + "'>" +
-      "<table>" +
-        body +
-      "</table>" +
-    "</div>"
-  );
-
-};
-
-// IJavaScript HTML processor receive parameter of defined HTML fragment
-$$.html(compsci._toHtml());
+    </div>
 {% endblock %}
+
+<!- This is turning off birds background from base.html -->
+
