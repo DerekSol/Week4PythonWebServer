@@ -21,8 +21,8 @@ def index():
 def stub():
     return render_template("stub.html")
 
-@app.route('/stub/')  # connects /stub/ URL to stub() function
-def stub():
+@app.route('/scrum/')  # connects /stub/ URL to stub() function
+def scrum():
     return render_template("Scrum.html")
 
 # this runs the application on the development server
