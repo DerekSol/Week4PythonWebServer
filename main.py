@@ -26,7 +26,7 @@ def scrum():
     return render_template("Scrum.html")
 
 @app.route('/More/')  # connects /stub/ URL to stub() function
-def scrum():
+def more():
     return render_template("more.html")
 
 # this runs the application on the development server
