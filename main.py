@@ -24,6 +24,9 @@ def stub():
 @app.route('/scrum/')  # connects /stub/ URL to stub() function
 def scrum():
     return render_template("Scrum.html")
+@app.route('/More/')  # connects /stub/ URL to stub() function
+def scrum():
+    return render_template("more.html")
 
 # this runs the application on the development server
 if __name__ == "__main__":
